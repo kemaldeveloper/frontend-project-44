@@ -2,14 +2,24 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![hexlet-check](https://github.com/kemaldeveloper/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kemaldeveloper/frontend-project-44/actions)",
-  "main": "index.js",
-  "type": "module",
+  "license": "ISC",
+  "author": "",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "oxlint && oxfmt --check",
+    "lint:fix": "oxfmt && oxlint --fix",
+    "lint:init": "oxlint --init",
+    "fmt:init": "oxfmt --init"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0"
+  }
 }
